@@ -23,9 +23,8 @@ feedbackForm.addEventListener('input', () => {
 
 feedbackForm.addEventListener('submit', event => {
   event.preventDefault();
-  //   console.log(JSON.parse(l));
 
-  if (feedbackFormEmail.value && feedbackFormMessage.value) {
+  if (feedbackFormEmail.value.trim() && feedbackFormMessage.value.trim()) {
     console.log(JSON.parse(localStorage.getItem(localStorageKey)));
     localStorage.removeItem(localStorageKey);
     feedbackForm.reset();

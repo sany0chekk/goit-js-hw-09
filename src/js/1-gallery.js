@@ -70,14 +70,14 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
-createImage(images);
+createGalleryItems(images);
 
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
 
-function createImage(array) {
+function createGalleryItems(array) {
   const createImages = array
     .map(({ preview, original, description }) => {
       return `<li class="gallery-item">
